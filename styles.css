@@ -3,7 +3,9 @@
 body {
   font-family: 'Lato';
   font-weight: 400;
-  color: #fff;
+  background: linear-gradient(135deg, #385ea3 0%, #577dc2 100%);
+  min-height: 100vh;
+  color: #f4f7fa;
 }
 
 h1, h2, h3, h4, h5 {
@@ -56,48 +58,74 @@ button {
 }
 
 nav {
-  background: #f2f2f2;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 12px 0;
-  text-align: right;
+  background: #385ea3;
+  box-shadow: 0 2px 8px rgba(56,94,163,0.08);
+  padding: 0.5rem 0;
+  text-align: unset;
+  border-bottom: none;
 }
 
-nav span {
-  font-size: 1.2em;
+.navbar-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-logo img {
+  height: 48px;
+  width: 48px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(56,94,163,0.10);
+}
+
+.navbar-donate-btn,
+.donate-btn {
+  background: #f4f7fa;
+  color: #385ea3;
+  border: none;
+  border-radius: 22px;
+  padding: 0.6em 1.8em;
   font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(56,94,163,0.10);
+  margin: 4px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navbar-donate-btn:hover,
+.donate-btn:hover {
+  background: #577dc2;
   color: #fff;
 }
 
 .main-container {
-  position: relative;
-  width: 100vw;
-  height: 90vh;
-  min-height: 500px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
-  gap: 0;
-  align-items: center;
-  justify-items: center;
-  background: transparent;
-}
-
-/* Remove SDG icon styles */
-.sdg,
-.sdg-3,
-.sdg-17,
-.sdg-8,
-.sdg img {
-  display: none !important;
+  max-width: 900px;
+  margin: 2.5rem auto 0 auto;
+  background: rgba(244,247,250,0.10);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(56,94,163,0.10);
+  padding: 2.5rem 2rem;
 }
 
 .center-content {
-  grid-column: 2;
-  grid-row: 1 / span 2;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .fixit-logo {
@@ -112,9 +140,12 @@ nav span {
 }
 
 .fixit-logo img {
-  width: 90px;
-  height: auto;
-  margin-bottom: 10px;
+  height: 96px;
+  width: 96px;
+  border-radius: 18px;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 2px 12px rgba(56,94,163,0.13);
 }
 
 .fixit-title {
@@ -128,46 +159,32 @@ nav span {
 
 
 .description {
-  grid-column: 1 / span 3;
-  grid-row: 3;
-  align-self: end;
-  justify-self: center;
-  margin-bottom: 24px;
-  max-width: 900px;
-  text-align: left;
-}
-
-.description p {
+  text-align: center;
   font-size: 1.25rem;
+  color: #f4f7fa;
+  margin-top: 1.5rem;
+}
+
+.description b {
   color: #fff;
-  font-family: 'Lato';
-  font-weight: 700;
-  text-shadow: 1px 1px 4px #2d2d2d44;
-  margin: 0;
-  padding: 0 16px;
+  letter-spacing: 1px;
 }
 
-.heart-icon img {
-  width: 55px;
-  height: auto;
+@media (max-width: 600px) {
+  .main-container {
+    padding: 1.2rem 0.5rem;
+  }
+  .fixit-logo img {
+    height: 72px;
+    width: 72px;
+  }
 }
 
-.description {
-  grid-column: 1 / span 3;
-  grid-row: 3;
-  align-self: end;
-  justify-self: center;
-  margin-bottom: 24px;
-  max-width: 900px;
-  text-align: left;
-}
-
-.description p {
-  font-size: 1.25rem;
-  color: #fff;
-  font-family: 'Lato';
-  font-weight: 700;
-  text-shadow: 1px 1px 4px #2d2d2d44;
-  margin: 0;
-  padding: 0 16px;
+/* Remove SDG icon styles */
+.sdg,
+.sdg-3,
+.sdg-17,
+.sdg-8,
+.sdg img {
+  display: none !important;
 }
