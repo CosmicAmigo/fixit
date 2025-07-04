@@ -3,11 +3,13 @@
 body {
   font-family: 'Lato';
   font-weight: 400;
+  color: #fff;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Roboto Condensed';
   font-weight: 700;
+  color: #fff;
 }
 
 html {font-size: 100%;} /* 16px */
@@ -63,5 +65,109 @@ nav {
 nav span {
   font-size: 1.2em;
   font-weight: bold;
-  color: #333;
+  color: #fff;
+}
+
+.main-container {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 0;
+  align-items: center;
+  justify-items: center;
+  background: transparent;
+}
+
+/* Remove SDG icon styles */
+.sdg,
+.sdg-3,
+.sdg-17,
+.sdg-8,
+.sdg img {
+  display: none !important;
+}
+
+.center-content {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixit-logo {
+  background: #fff;
+  border-radius: 20px;
+  border: 4px solid #b2e03b;
+  padding: 32px 36px 24px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.fixit-logo img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.fixit-title {
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+
+.description {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 24px;
+  max-width: 900px;
+  text-align: left;
+}
+
+.description p {
+  font-size: 1.25rem;
+  color: #fff;
+  font-family: 'Lato';
+  font-weight: 700;
+  text-shadow: 1px 1px 4px #2d2d2d44;
+  margin: 0;
+  padding: 0 16px;
+}
+
+.heart-icon img {
+  width: 55px;
+  height: auto;
+}
+
+.description {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 24px;
+  max-width: 900px;
+  text-align: left;
+}
+
+.description p {
+  font-size: 1.25rem;
+  color: #fff;
+  font-family: 'Lato';
+  font-weight: 700;
+  text-shadow: 1px 1px 4px #2d2d2d44;
+  margin: 0;
+  padding: 0 16px;
 }
