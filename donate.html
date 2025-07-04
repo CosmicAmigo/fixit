@@ -8,6 +8,40 @@
     <link rel="icon" href="assets/fixit_logo.png" type="image/x-icon">
 </head>
 <body>
-    
+    <nav>
+        <span>Fix-It Navbar</span>
+    </nav>
+    <center>
+        <h1>Support Our Cause</h1>
+        <p>Help Fix-It make a difference! Your donation supports our mission to repair and improve communities for a better tomorrow.</p>
+        <div style="margin: 24px 0;">
+            <button class="donate-btn" data-amount="5">$5</button>
+            <button class="donate-btn" data-amount="10">$10</button>
+            <button class="donate-btn" data-amount="25">$25</button>
+            <button class="donate-btn" data-amount="50">$50</button>
+        </div>
+        <div style="margin-bottom: 16px;">
+            <input id="customAmount" type="number" min="1" placeholder="Custom amount" style="padding:8px; border-radius:8px; border:1px solid #ccc; width:120px;">
+            <button id="customDonateBtn" class="donate-btn" style="margin-left:8px;">Donate</button>
+        </div>
+    </center>
+    <script>
+        // Dummy PayPal link
+        const paypalBase = "https://www.paypal.com/donate?hosted_button_id=DUMMYID";
+        document.querySelectorAll('.donate-btn[data-amount]').forEach(btn => {
+            btn.onclick = function() {
+                const amount = btn.getAttribute('data-amount');
+                window.location.href = paypalBase + "&amount=" + encodeURIComponent(amount);
+            }
+        });
+        document.getElementById('customDonateBtn').onclick = function() {
+            const amount = document.getElementById('customAmount').value;
+            if (amount && parseFloat(amount) > 0) {
+                window.location.href = paypalBase + "&amount=" + encodeURIComponent(amount);
+            } else {
+                alert("Please enter a valid donation amount.");
+            }
+        }
+    </script>
 </body>
 </html>
