@@ -28,6 +28,81 @@
                 <b>-Fix It</b> is a non-profit initiative that provides healthcare services to the underserved and marginalised areas in Kenya through the help of mobile healthcare units.
             </p>
         </div>
+        <div class="services-section">
+            <h2 class="services-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-box" tabindex="0">
+                    <div class="service-icon">
+                        <img src="assets/emergencybg.svg" alt="Emergency Care Icon" width="60" height="60" />
+                    </div>
+                    <div class="service-title">1. Emergency Care<br>and Trauma Services</div>
+                    <div class="service-info">
+                        <p>
+                            Immediate medical attention for critical injuries and emergencies, including stabilization and rapid response.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-box" tabindex="0">
+                    <div class="service-icon">
+                        <img src="assets/maternalbg.svg" alt="Maternal and Child Health Icon" width="60" height="60" />
+                    </div>
+                    <div class="service-title">2. Maternal and Child Health</div>
+                    <div class="service-info">
+                        <p>
+                            Comprehensive care for mothers and children, including prenatal, postnatal, and pediatric services.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-box" tabindex="0">
+                    <div class="service-icon">
+                        <img src="assets/surgicalbg.svg" alt="Surgical Services Icon" width="60" height="60" />
+                    </div>
+                    <div class="service-title">3. Surgical Services</div>
+                    <div class="service-info">
+                        <p>
+                            Safe and essential surgical procedures performed by qualified professionals in mobile units.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-box" tabindex="0">
+                    <div class="service-icon">
+                        <img src="assets/healthbg.svg" alt="Primary Healthcare Icon" width="60" height="60" />
+                    </div>
+                    <div class="service-title">4. Primary Healthcare Services</div>
+                    <div class="service-info">
+                        <p>
+                            Preventive, diagnostic, and basic treatment services for common illnesses and health conditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+<script>
+    // Service box expand/collapse on click/tap/keyboard
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.service-box').forEach(box => {
+            box.addEventListener('click', function(e) {
+                // Only toggle if not clicking inside already open info
+                if (!box.classList.contains('open')) {
+                    document.querySelectorAll('.service-box.open').forEach(b => b.classList.remove('open'));
+                }
+                box.classList.toggle('open');
+            });
+            box.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    box.click();
+                }
+            });
+        });
+        // Close if clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.service-box')) {
+                document.querySelectorAll('.service-box.open').forEach(b => b.classList.remove('open'));
+            }
+        });
+    });
+</script>
 </body>
 </html>

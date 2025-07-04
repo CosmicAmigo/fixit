@@ -170,6 +170,113 @@ nav {
   letter-spacing: 1px;
 }
 
+.services-section {
+  margin-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.services-title {
+  text-align: center;
+  color: #ffe66d;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.service-box {
+  background: rgba(244,247,250,0.13);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(56,94,163,0.13);
+  padding: 1.2rem 1rem 1rem 1rem;
+  min-width: 180px;
+  min-height: 180px;
+  max-width: 320px;
+  color: #ffe66d;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.2s, transform 0.2s;
+  will-change: transform;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-box:focus {
+  box-shadow: 0 0 0 3px #ffe66d99;
+}
+
+.service-box .service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  font-size: 2.5rem;
+}
+
+.service-title {
+  text-align: left;
+  color: #ffe66d;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.service-info {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.25s;
+  background: rgba(56,94,163,0.13);
+  color: #fff;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  font-family: 'Lato';
+  font-weight: 400;
+}
+
+.service-box.open,
+.service-box:hover,
+.service-box:active {
+  animation: zoomBounce 0.35s;
+  z-index: 2;
+  box-shadow: 0 6px 32px 0 rgba(56,94,163,0.18);
+  transform: scale(1.04);
+}
+
+.service-box.open .service-info,
+.service-box:hover .service-info,
+.service-box:active .service-info {
+  max-height: 120px;
+  opacity: 1;
+  padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+}
+
+@keyframes zoomBounce {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.08); }
+  80% { transform: scale(0.98); }
+  100% { transform: scale(1.04); }
+}
+
 @media (max-width: 600px) {
   .main-container {
     padding: 1.2rem 0.5rem;
@@ -177,6 +284,17 @@ nav {
   .fixit-logo img {
     height: 72px;
     width: 72px;
+  }
+}
+
+@media (max-width: 800px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .service-box {
+    min-width: 0;
+    width: 100%;
   }
 }
 
