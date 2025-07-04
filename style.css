@@ -22,3 +22,14 @@ body {
     user-select: none;
     display: inline-block;
 }
+
+button{
+    color: amber;
+
+}
+
+--text: #050316;
+--background: #c7c7e5;
+--primary: #7ea8f7;
+--secondary: #dddbff;
+--accent: #9f9ed1;
