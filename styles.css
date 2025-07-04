@@ -277,6 +277,73 @@ nav {
   100% { transform: scale(1.04); }
 }
 
+.facilities-section {
+  margin-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.facilities-title {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 0 #385ea3, 0 2px 8px #385ea333;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.facility-box {
+  background: rgba(244,247,250,0.13);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(56,94,163,0.13);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  min-width: 180px;
+  min-height: 180px;
+  max-width: 340px;
+  color: #222;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.facility-icon {
+  margin-bottom: 0.7rem;
+}
+
+.facility-title {
+  color: #4b2e2e;
+  font-size: 1.3rem;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.facility-desc {
+  color: #fff;
+  font-size: 1.05rem;
+  font-family: 'Lato';
+  font-weight: 400;
+  margin-top: 0.2rem;
+  text-shadow: 1px 1px 4px #2d2d2d44;
+}
+
 @media (max-width: 600px) {
   .main-container {
     padding: 1.2rem 0.5rem;
@@ -293,6 +360,14 @@ nav {
     gap: 1.2rem;
   }
   .service-box {
+    min-width: 0;
+    width: 100%;
+  }
+  .facilities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .facility-box {
     min-width: 0;
     width: 100%;
   }
