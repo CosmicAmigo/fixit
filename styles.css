@@ -344,6 +344,20 @@ nav {
   text-shadow: 1px 1px 4px #2d2d2d44;
 }
 
+.contact-right {
+    text-align: right;
+    margin-right: 2rem;
+}
+
+.contact-title {
+    font-size: 1.1rem;
+}
+
+.contact-icons img {
+    width: 48px;
+    height: 48px;
+}
+
 @media (max-width: 600px) {
   .main-container {
     padding: 1.2rem 0.5rem;
