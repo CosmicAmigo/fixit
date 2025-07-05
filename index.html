@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fix-It</title>
+    <title>Fix-It Healthcare Initiative</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/fixit_logo.png" type="image/x-icon">
 </head>
@@ -12,133 +12,202 @@
         <div class="navbar-content">
             <div class="navbar-logo">
                 <img src="assets/fixit_logo.png" alt="Fix It Logo">
-                <span style="font-size:1.3rem;font-weight:bold;letter-spacing:1px;">Fix-It</span>
+                <span>Fix-It</span>
             </div>
-            <button class="navbar-donate-btn" onclick="window.location.href='/donate.html'">Donate</button>
+            <div class="navbar-buttons">
+                <button class="navbar-volunteer-btn" onclick="window.location.href='/volunteer.html'">Volunteer</button>
+                <button class="navbar-donate-btn" onclick="window.location.href='/donate.html'">Donate</button>
+            </div>
         </div>
     </nav>
-    <div class="main-container">
-        <div class="center-content">
-            <div class="fixit-logo">
-                <img src="assets/fixit_logo.png" alt="Fix It Logo">
+
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-flex">
+                <div class="hero-content-col">
+                    <h1 class="fixit-title-main">Your Health Is Our Priority</h1>
+                    <div class="hero-description">
+                        <p>Fix-It is a non-profit initiative that provides healthcare services to underserved communities in Kenya through mobile healthcare units.</p>
+                        <a href="#services" class="cta-button">Explore Our Services</a>
+                    </div>
+                </div>
+                <div class="hero-curved-img-col">
+                    <div class="hero-blob-frame">
+                        <div class="hero-blob-img-holder">
+                            <img src="assets/doctor.png" alt="Medical professional helping patient">
+                        </div>
+                    </div>
+                </div>
+                <div class="dotgrid-bg"></div>
             </div>
-        </div>
-        <div class="description">
-            <p>
-                <b>-Fix It</b> is a non-profit initiative that provides healthcare services to the underserved and marginalised areas in Kenya through the help of mobile healthcare units.
-            </p>
-        </div>
-        <div class="services-section">
-            <h2 class="services-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-box" tabindex="0">
-                    <div class="service-icon">
-                        <img src="assets/emergencybg.svg" alt="Emergency Care Icon" width="60" height="60" />
-                    </div>
-                    <div class="service-title">1. Emergency Care<br>and Trauma Services</div>
-                    <div class="service-info">
-                        <p>
-                            Immediate medical attention for critical injuries and emergencies, including stabilization and rapid response.
-                        </p>
-                    </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">+250</div>
+                    <div class="stat-label">Medical Staff</div>
                 </div>
-                <div class="service-box" tabindex="0">
-                    <div class="service-icon">
-                        <img src="assets/maternalbg.svg" alt="Maternal and Child Health Icon" width="60" height="60" />
-                    </div>
-                    <div class="service-title">2. Maternal and Child Health</div>
-                    <div class="service-info">
-                        <p>
-                            Comprehensive care for mothers and children, including prenatal, postnatal, and pediatric services.
-                        </p>
-                    </div>
+                <div class="stat-item">
+                    <div class="stat-number">80</div>
+                    <div class="stat-label">Mobile Units</div>
                 </div>
-                <div class="service-box" tabindex="0">
-                    <div class="service-icon">
-                        <img src="assets/surgicalbg.svg" alt="Surgical Services Icon" width="60" height="60" />
-                    </div>
-                    <div class="service-title">3. Surgical Services</div>
-                    <div class="service-info">
-                        <p>
-                            Safe and essential surgical procedures performed by qualified professionals in mobile units.
-                        </p>
-                    </div>
+                <div class="stat-item">
+                    <div class="stat-number">150</div>
+                    <div class="stat-label">Communities Served</div>
                 </div>
-                <div class="service-box" tabindex="0">
-                    <div class="service-icon">
-                        <img src="assets/healthbg.svg" alt="Primary Healthcare Icon" width="60" height="60" />
-                    </div>
-                    <div class="service-title">4. Primary Healthcare Services</div>
-                    <div class="service-info">
-                        <p>
-                            Preventive, diagnostic, and basic treatment services for common illnesses and health conditions.
-                        </p>
-                    </div>
+                <div class="stat-item">
+                    <div class="stat-number">+5000</div>
+                    <div class="stat-label">Patients Monthly</div>
                 </div>
             </div>
-        </div>
-        <div class="facilities-section">
-            <h2 class="facilities-title">Our Facilities</h2>
-            <div class="facilities-grid">
-                <div class="facility-box">
-                    <div class="facility-icon">
-                        <img src="assets/remote_vehicle.svg" alt="Remote Vehicles Icon" width="90" height="90" />
-                    </div>
-                    <div class="facility-title">Remote Vehicles</div>
-                    <div class="facility-desc">Vans &amp; Buses to travel to the patients</div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="services-flex">
+                <div class="blob-title services-title-right">
+                    <span>Our Services</span>
+                    <span class="blob-title-bg">
+                        <span class="curved-outline-bg"></span>
+                    </span>
                 </div>
-                <div class="facility-box">
-                    <div class="facility-icon">
-                        <img src="assets/supply_vehicle.svg" alt="Supply Vehicles Icon" width="90" height="90" />
+                <div class="services-grid">
+                    <div class="service-box" tabindex="0">
+                        <div class="service-icon">
+                            <img src="assets/emergencybg.svg" alt="Emergency Care Icon">
+                        </div>
+                        <h3 class="service-title">Emergency Care & Trauma Services</h3>
+                        <div class="service-info">
+                            <p>Immediate medical attention for critical injuries and emergencies, including stabilization and rapid response.</p>
+                        </div>
                     </div>
-                    <div class="facility-title">Supply Vehicles</div>
-                    <div class="facility-desc">Pickup trucks, boats &amp; more vans to transport medical materials</div>
+                    <div class="service-box" tabindex="0">
+                        <div class="service-icon">
+                            <img src="assets/maternalbg.svg" alt="Maternal and Child Health Icon">
+                        </div>
+                        <h3 class="service-title">Maternal and Child Health</h3>
+                        <div class="service-info">
+                            <p>Comprehensive care for mothers and children, including prenatal, postnatal, and pediatric services.</p>
+                        </div>
+                    </div>
+                    <div class="service-box" tabindex="0">
+                        <div class="service-icon">
+                            <img src="assets/surgicalbg.svg" alt="Surgical Services Icon">
+                        </div>
+                        <h3 class="service-title">Surgical Services</h3>
+                        <div class="service-info">
+                            <p>Safe and essential surgical procedures performed by qualified professionals in mobile units.</p>
+                        </div>
+                    </div>
+                    <div class="service-box" tabindex="0">
+                        <div class="service-icon">
+                            <img src="assets/healthbg.svg" alt="Primary Healthcare Icon">
+                        </div>
+                        <h3 class="service-title">Primary Healthcare Services</h3>
+                        <div class="service-info">
+                            <p>Preventive, diagnostic, and basic treatment services for common illnesses and health conditions.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section class="facilities-section">
+            <div class="facilities-flex">
+                <div class="blob-title facilities-title-left">
+                    <span>Our Facilities</span>
+                    <span class="blob-title-bg">
+                        <span class="curved-outline-bg"></span>
+                    </span>
+                </div>
+                <div class="facilities-grid">
+                    <div class="facility-box">
+                        <div class="facility-icon">
+                            <img src="assets/remote_vehicle.svg" alt="Remote Vehicles Icon">
+                        </div>
+                        <h3 class="facility-title">Mobile Clinics</h3>
+                        <p class="facility-desc">Fully equipped medical vans & buses that travel directly to patients in remote areas.</p>
+                    </div>
+                    <div class="facility-box">
+                        <div class="facility-icon">
+                            <img src="assets/supply_vehicle.svg" alt="Supply Vehicles Icon">
+                        </div>
+                        <h3 class="facility-title">Supply Vehicles</h3>
+                        <p class="facility-desc">Pickup trucks, boats & specialized vans to transport medical equipment and supplies.</p>
+                    </div>
+                    <div class="facility-box">
+                        <div class="facility-icon">
+                            <img src="assets/telemedicine.svg" alt="Telemedicine Icon">
+                        </div>
+                        <h3 class="facility-title">Telemedicine Units</h3>
+                        <p class="facility-desc">Portable telemedicine stations for remote consultations with specialists.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-content">
+            <div class="blob-title contact-title">
+                <span>Contact Us</span>
+                <span class="blob-title-bg">
+                    <span class="curved-outline-bg"></span>
+                </span>
+            </div>
+            <div class="contact-icons">
+                <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+                    <img src="assets/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+                    <img src="assets/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://x.com/" target="_blank" aria-label="X (Twitter)">
+                    <img src="assets/x.svg" alt="X (Twitter)">
+                </a>
+                <a href="https://bit.ly/fixitorg/" target="_blank" aria-label="Website">
+                    <img src="assets/web.svg" alt="Website">
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="contact-section contact-right">
-        <h2 class="contact-title" style="font-size:1.1rem;">Contact Us</h2>
-        <div class="contact-icons">
-            <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
-                <img src="assets/instagram.svg" alt="Instagram" width="48" height="48" />
-            </a>
-            <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
-                <img src="assets/facebook.svg" alt="Facebook" width="48" height="48" />
-            </a>
-            <a href="https://x.com/" target="_blank" aria-label="Facebook">
-                <img src="assets/x.svg" alt="x" width="48" height="48" />
-            </a>
-            <a href="https://bit.ly/fixitorg/" target="_blank" aria-label="Website">
-                <img src="assets/web.svg" alt="Website" width="48" height="48" />
-            </a>
-        </div>
-    </div>
-<script>
-    // Service box expand/collapse on click/tap/keyboard
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.service-box').forEach(box => {
-            box.addEventListener('click', function(e) {
-                // Only toggle if not clicking inside already open info
-                if (!box.classList.contains('open')) {
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fix-It Healthcare Initiative. All rights reserved.</p>
+        <p>Designed with care for Kenya</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Service box expand/collapse
+            document.querySelectorAll('.service-box').forEach(box => {
+                box.addEventListener('click', function(e) {
+                    if (!box.classList.contains('open')) {
+                        document.querySelectorAll('.service-box.open').forEach(b => b.classList.remove('open'));
+                    }
+                    box.classList.toggle('open');
+                });
+                
+                box.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        box.click();
+                    }
+                });
+            });
+
+            // Close service boxes when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.service-box')) {
                     document.querySelectorAll('.service-box.open').forEach(b => b.classList.remove('open'));
                 }
-                box.classList.toggle('open');
-            });
-            box.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    box.click();
-                }
             });
         });
-        // Close if clicking outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.service-box')) {
-                document.querySelectorAll('.service-box.open').forEach(b => b.classList.remove('open'));
-            }
-        });
-    });
-</script>
+    </script>
 </body>
 </html>
