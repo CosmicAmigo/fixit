@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer for Staff Positions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="navbar-logo">
+                <img src="assets/fixit_logo.png" alt="Fix It Logo">
+                <span style="font-size:1.3rem;font-weight:bold;letter-spacing:1px;">Fix-It</span>
+            </div>
+            <button class="navbar-donate-btn" onclick="window.location.href='/donate.html'">Donate</button>
+        </div>
+    </nav>
+    <div class="main-container">
+        <h1>Volunteer for Staff Positions</h1>
+        <div class="info">
+            <strong>Medical staff:</strong> Physicians, Nurses, Paramedics and EMTs, Pharmacists, CHWs<br>
+            <strong>Support staff:</strong> Medical assistants, Orderlies, Drivers, Logistics, Sanitation crew
+        </div>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="post">Select Position</label>
+            <select id="post" name="post" required>
+                <option value="">-- Select a post --</option>
+                <optgroup label="Medical staff">
+                    <option>Physician</option>
+                    <option>Nurse</option>
+                    <option>Paramedic / EMT</option>
+                    <option>Pharmacist</option>
+                    <option>CHW</option>
+                </optgroup>
+                <optgroup label="Support staff">
+                    <option>Medical Assistant / Orderly</option>
+                    <option>Driver / Vehicle Maintenance</option>
+                    <option>Logistics Coordinator / Supply Manager</option>
+                    <option>Sanitation / Cleaning Crew</option>
+                </optgroup>
+            </select>
+
+            <button type="submit" class="donate-btn">Volunteer</button>
+        </form>
+    </div>
+</body>
+</html>
