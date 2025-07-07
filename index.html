@@ -27,38 +27,37 @@
             <div class="hero-flex">
                 <div class="hero-content-col">
                     <h1 class="fixit-title-main">Your Health Is Our Priority</h1>
+                  <div class="dot-grid" id="dotGrid"></div>
                     <div class="hero-description">
                         <p>Fix-It is a non-profit initiative that provides healthcare services to underserved communities in Kenya through mobile healthcare units.</p>
+                        <h5>Caring for you like family, Healing with every heartbeat</h5>
                         <a href="#services" class="cta-button">Explore Our Services</a>
                     </div>
-                </div>
-                <div class="hero-curved-img-col">
-                    <div class="hero-blob-frame">
-                        <div class="hero-blob-img-holder">
-                            <img src="assets/doctor.png" alt="Medical professional helping patient">
-                        </div>
+                    <!--
+                    <div class="picture">
+                        <img src="assets/doctor.png" alt="Healthcare Illustration">
                     </div>
+                    -->
                 </div>
-                <div class="dotgrid-bg"></div>
             </div>
         </section>
 
         <!-- Stats Section -->
         <section class="stats-section">
             <div class="stats-grid">
-                <div class="stat-item">
+                <div class="stat-item" tabindex="0">
                     <div class="stat-number">+250</div>
                     <div class="stat-label">Medical Staff</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item" tabindex="0">
                     <div class="stat-number">80</div>
                     <div class="stat-label">Mobile Units</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item" tabindex="0">
                     <div class="stat-number">150</div>
                     <div class="stat-label">Communities Served</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item" tabindex="0">
                     <div class="stat-number">+5000</div>
                     <div class="stat-label">Patients Monthly</div>
                 </div>
@@ -139,6 +138,7 @@
                         <h3 class="facility-title">Supply Vehicles</h3>
                         <p class="facility-desc">Pickup trucks, boats & specialized vans to transport medical equipment and supplies.</p>
                     </div>
+                   <!--
                     <div class="facility-box">
                         <div class="facility-icon">
                             <img src="assets/telemedicine.svg" alt="Telemedicine Icon">
@@ -146,6 +146,7 @@
                         <h3 class="facility-title">Telemedicine Units</h3>
                         <p class="facility-desc">Portable telemedicine stations for remote consultations with specialists.</p>
                     </div>
+                    --> 
                 </div>
             </div>
         </section>
@@ -208,6 +209,16 @@
                 }
             });
         });
+
+    const grid = document.getElementById('dotGrid');
+    const rows = 20;
+    const cols = 10;
+
+    for (let i = 0; i < rows * cols; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'dot';
+      grid.appendChild(dot);
+    }
     </script>
 </body>
 </html>
