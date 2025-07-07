@@ -162,8 +162,8 @@ nav {
   position: absolute;
   top: -32px;
   left: -32px;
-  width: 420px;
-  height: 260px;
+  width: 220px;
+  height: 140px;
   z-index: 0;
   pointer-events: none;
   display: flex;
@@ -639,14 +639,14 @@ footer {
     min-height: 200px;
   }
   .hero-blob-frame {
-    width: 180px;
-    height: 90px;
+    width: 110px;
+    height: 55px;
   }
   .hero-blob-img-holder {
-    width: 80px;
-    height: 48px;
-    left: 32px;
-    top: 16px;
+    width: 48px;
+    height: 32px;
+    left: 24px;
+    top: 8px;
   }
   .dotgrid-bg {
     width: 90px;
