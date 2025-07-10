@@ -36,7 +36,7 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 
 small {font-size: 0.750rem; /* 12px */}
 
-p {font-size: 0.750rem; /* 12px */}
+p {font-size: 0.950rem; /* 12px */}
 
 
 /*
@@ -831,13 +831,13 @@ footer {
 }
 
 .dot-grid {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(20, 20px);
+  grid-template-columns: repeat(20, 10px);
   grid-auto-rows: 20px;
   grid-gap: 10px;
   justify-content: left;
@@ -849,8 +849,8 @@ footer {
 }
 
 .dot {
-  width: 15px;
-  height:15px;
+  width: 10px;
+  height:10px;
   background-color: #66c0fc;
   border-radius: 50%;
 }
