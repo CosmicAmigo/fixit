@@ -8,14 +8,17 @@
 <body>
     <nav>
         <div class="navbar-content">
-            <div class="navbar-logo">
+            <div class="navbar-logo" onclick="window.location.href='/index.html'">
                 <img src="assets/fixit_logo.png" alt="Fix It Logo">
                 <span style="font-size:1.3rem;font-weight:bold;letter-spacing:1px;">Fix-It</span>
             </div>
+            <button class="navbar-volunteer-btn" onclick="window.location.href='/founders.html'">Founders</button>            
             <button class="navbar-donate-btn" onclick="window.location.href='/donate.html'">Donate</button>
         </div>
     </nav>
     <div class="main-container">
+        <section class="volunteer-form">
+        <img src="assets/fixit_logo.png" alt="Fix It Logo" class="logo">
         <h1>Volunteer for Staff Positions</h1>
         <div class="info">
             <strong>Medical staff:</strong> Physicians, Nurses, Paramedics and EMTs, Pharmacists, CHWs<br>
@@ -51,6 +54,7 @@
 
             <button type="submit" class="donate-btn">Volunteer</button>
         </form>
+    </section>
     </div>
 </body>
 </html>

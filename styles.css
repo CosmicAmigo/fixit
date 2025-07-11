@@ -461,9 +461,9 @@ nav {
 
 @keyframes zoomBounce {
   0% { transform: scale(1); }
-  60% { transform: scale(1.08); }
-  80% { transform: scale(0.98); }
-  100% { transform: scale(1.04); }
+  60% { transform: scale(1.0); }
+  80% { transform: scale(0.9); }
+  100% { transform: scale(1.02); }
 }
 
 .facility-box {
@@ -875,6 +875,8 @@ border-radius: 50%;
 }
 
 .founder-card {
+  width: 600px;
+  height: 400px;
   background: rgba(244,247,250,0.13);
   border-radius: 18px;
   box-shadow: 0 2px 12px rgba(56,94,163,0.13);
@@ -885,10 +887,90 @@ border-radius: 50%;
   gap: 1.5rem;
 }
 
+.founder-card :hover {
+  background: rgba(244,250,254,0.13);
+  animation: float 1s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
 .founder-card img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(56,94,163,0.10);
 }
+
+.volunteer-form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #3dd9fb;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.15);
+}
+
+.volunteer-form .logo {
+  display: block;
+  margin: 0 auto 20px;
+  height: 60px;
+}
+
+.volunteer-form h1 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.volunteer-form .info {
+  font-size: 14px;
+  background: #e7faff;
+  border-left: 5px solid #00b4d8;
+  padding: 10px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  color: #4b2e2e;
+}
+
+.volunteer-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.volunteer-form label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #041218;
+}
+
+.volunteer-form input,
+.volunteer-form select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.volunteer-form button.donate-btn {
+  padding: 12px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.volunteer-form button.donate-btn:hover {
+  background: #0096c7;
+}
+
 /* End of styles.css */
