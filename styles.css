@@ -833,8 +833,7 @@ border-radius: 50%;
 }
 
 .dot-grid {
-  position: fixed;
-  padding-left: 35px;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -887,8 +886,8 @@ border-radius: 50%;
 }
 
 .founder-card img {
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(56,94,163,0.10);
 }
